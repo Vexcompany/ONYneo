@@ -18,7 +18,7 @@ interface RequestBody {
 
 export async function POST(
   req: NextRequest,
-  ctx: { params: Promise<{ caseId: string }> },
+  ctx: { params: { caseId: string } },
 ) {
   const user = await assertOsamaAccess();
   if (!user) {
@@ -28,7 +28,7 @@ export async function POST(
     );
   }
 
-  const { caseId } = await ctx.params;
+  const { caseId } = ctx.params;
   if (
     !caseId ||
     caseId.length > 100 ||
