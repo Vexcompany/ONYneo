@@ -146,3 +146,19 @@
     animation: none;
   }
 }
+
+
+.wrapper{display:flex;flex-direction:column;gap:12px;padding:18px;background:var(--paper-deep);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sectionLabel{color:var(--ink);font:700 10px var(--font-mono);letter-spacing:.12em;text-transform:uppercase}
+.downloadBtn{min-height:40px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:var(--ink);border:2px solid var(--ink);border-radius:0;box-shadow:3px 3px 0 var(--ink);font:700 9px var(--font-mono);cursor:pointer}
+.downloadBtn:hover:not(:disabled){background:var(--blue);color:white;transform:translate(-1px,-1px)}
+.downloadBtn:disabled{opacity:.55;cursor:not-allowed}
+.errorNotice{margin:0;padding:10px 12px;background:#fff0f3;border:2px solid #c21c4b;color:#a5133b;border-radius:0;font-size:12px}
+.previewWrap{position:relative;width:100%;aspect-ratio:3375/6000;background:#e8e4da;border:2px solid var(--ink);border-radius:0;overflow:hidden}
+.canvas{display:block;width:100%;height:100%;object-fit:contain;transition:opacity .2s}
+.loadingOverlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;pointer-events:none;background:rgba(242,239,230,.65)}
+.loadingDot{width:24px;height:24px;border:3px solid rgba(10,10,10,.2);border-top-color:var(--blue);border-radius:50%;animation:osamaSpin .8s linear infinite}
+.loadingText{font:700 10px var(--font-mono);color:var(--ink)}
+@keyframes osamaSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.loadingDot{animation:none}}

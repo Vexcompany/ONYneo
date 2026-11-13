@@ -226,6 +226,7 @@ export function AspirationForm() {
         />
       </div>
 
+      <label className={styles.srOnly} htmlFor={messageId}>Isi aspirasi anonim</label>
       <AutoGrowTextarea
         id={messageId}
         name="message"
@@ -233,6 +234,12 @@ export function AspirationForm() {
         placeholder="Tulis pesanmu di sini..."
         maxLength={MESSAGE_MAX}
         value={message}
+        onKeyDown={(e) => {
+          if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+            e.preventDefault();
+            e.currentTarget.form?.requestSubmit();
+          }
+        }}
         onChange={(e) => {
           setMessage(e.target.value);
           if (fieldErrors.message) {
@@ -249,13 +256,17 @@ export function AspirationForm() {
         }
       />
 
+      <div className={styles.progressTrack} aria-hidden="true">
+        <span className={styles.progressFill} style={{ width: `${Math.min(100, (message.length / MESSAGE_MAX) * 100)}%` }} />
+      </div>
+
       <div className={styles.metaRow}>
         {fieldErrors.message ? (
           <span id={`${messageId}-err`} className={styles.errorText} role="alert">
             {fieldErrors.message}
           </span>
         ) : (
-          <span className={styles.spacer} aria-hidden="true" />
+          <span className={styles.hint}>Ctrl + Enter untuk mengirim</span>
         )}
         <span
           id={`${messageId}-count`}

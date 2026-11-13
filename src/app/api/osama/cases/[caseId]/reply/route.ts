@@ -50,14 +50,27 @@ export async function POST(
     );
   }
 
-  const replyStr =
-    typeof body.adminReply === "string" ? body.adminReply.trim() : "";
+  if (typeof body.adminReply !== "string") {
+    return NextResponse.json(
+      { ok: false, error: "Balasan harus berupa teks." },
+      { status: 400 },
+    );
+  }
+
+  const replyStr = body.adminReply.trim();
+  if (replyStr.length > 450) {
+    return NextResponse.json(
+      { ok: false, error: "Balasan maksimal 450 karakter." },
+      { status: 400 },
+    );
+  }
 
   const result = await updateAdminReply(caseId, replyStr);
   if (!result.ok) {
+    const status = result.reason === "not_found" ? 404 : 500;
     return NextResponse.json(
       { ok: false, error: result.reason ?? "Gagal menyimpan balasan." },
-      { status: 500 },
+      { status },
     );
   }
 

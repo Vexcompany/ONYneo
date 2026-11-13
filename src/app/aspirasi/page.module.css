@@ -22,3 +22,15 @@
 .afterNote { max-width: 600px; margin: 28px auto 0; text-align: center; font-size: 12px; line-height: 1.6; }
 @media (max-width: 760px) { .page { padding: 105px 20px 70px; } .sticker { right: 5px; top: -17px; } .consoleBody { padding: 18px; } .console { box-shadow: 8px 8px 0 var(--blue); } }
 @media (max-width: 430px) { .page { padding-inline: 16px; } .header { margin-bottom: 38px; } .header h1 { font-size: clamp(50px, 15vw, 68px); } .consoleTop { padding-inline: 10px; font-size: 9px; } .consoleBody { padding: 14px; } .sticker { font-size: 8px; padding: 8px; } }
+
+
+/* ONYneo public form route */
+.page{padding-top:132px}
+.header h1{letter-spacing:-.08em}
+.console{background:white;color:var(--ink);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.consoleTop{background:var(--ink);color:white;border-bottom:3px solid var(--ink)}
+.consoleBody{padding:22px}
+.sticker{right:-8px;background:var(--lime);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.privacy{font-size:10px}
+.afterNote{color:#555}
+@media(max-width:760px){.consoleBody{padding:16px}.console{box-shadow:6px 6px 0 var(--ink)}}

@@ -18,7 +18,7 @@ export interface CaseRow {
 export const ASPIRATION_STATUSES = ['new', 'processing', 'resolved', 'archived'] as const;
 export type AspirationStatus = (typeof ASPIRATION_STATUSES)[number];
 
-type Tab = 'terbaru' | 'populer' | 'ditanggapi';
+type Tab = 'terbaru' | 'terlama' | 'ditanggapi';
 
 export async function getDashboardCases({
   tab = 'terbaru',
@@ -38,7 +38,7 @@ export async function getDashboardCases({
     case 'ditanggapi':
       query = query.eq('status', 'resolved').order('updated_at', { ascending: false });
       break;
-    case 'populer':
+    case 'terlama':
       query = query.order('created_at', { ascending: true });
       break;
     case 'terbaru':

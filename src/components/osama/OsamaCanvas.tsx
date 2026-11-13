@@ -20,7 +20,7 @@ const CANVAS_H = 2560;
 
 const TEMPLATE_URL = "/kak-taksaka/osama/template.jpg";
 
-const FONT_SIZE = 44;
+const FONT_SIZE = 40;
 
 // Paper ruled line midpoints (Y center of the blank space between line k and line k+1)
 const Y_START = 441;

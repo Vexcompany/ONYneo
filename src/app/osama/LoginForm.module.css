@@ -107,3 +107,13 @@
   opacity: 0.5;
   box-shadow: none;
 }
+
+
+.form{gap:12px}
+.label{color:var(--ink);font:700 10px var(--font-mono);letter-spacing:.08em}
+.input{padding:14px 15px;color:var(--ink);background:#fbfaf6;border:2px solid var(--ink);border-radius:0;font-size:15px}
+.input::placeholder{color:#888}
+.input:focus{border-color:var(--blue);box-shadow:4px 4px 0 var(--blue);background:white}
+.error{background:#fff0f3;color:#a5133b;border:2px solid #c21c4b;border-radius:0}
+.submit{min-height:48px;margin-top:4px;color:white;background:var(--blue);border:2px solid var(--ink);border-radius:0;box-shadow:4px 4px 0 var(--ink);font:700 10px var(--font-mono)}
+.submit:hover:not(:disabled){background:var(--lime);color:var(--ink);transform:translate(-1px,-1px)}

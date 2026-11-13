@@ -3,6 +3,7 @@ import { redirect, notFound } from 'next/navigation';
 import { createServerSupabaseClient } from '@/lib/auth/supabase-server';
 import { getCaseById } from '@/lib/db/admin';
 import CaseActions from './CaseActions';
+import { AdminReplySection } from './AdminReplySection';
 import '@/styles/dashboard.css';
 
 interface Props {
@@ -61,7 +62,6 @@ export default async function CaseDetailPage({ params }: Props) {
   if (!caseData) notFound();
 
   const timeline = buildTimeline(caseData.status, caseData.created_at, caseData.updated_at ?? caseData.created_at);
-  const isResolved = caseData.status === 'resolved';
 
   return (
     <div className="detail-root">
@@ -104,7 +104,7 @@ export default async function CaseDetailPage({ params }: Props) {
         </div>
 
         {/* Balasan OSIS (hanya tampil jika status resolved/processing) */}
-        {isResolved && caseData.admin_reply && (
+        {caseData.admin_reply && (
           <div className="message-bubble">
             <div className="bubble-sender bubble-sender--osis">
               <div className="bubble-sender__avatar" aria-hidden="true">🏫</div>
@@ -144,6 +144,14 @@ export default async function CaseDetailPage({ params }: Props) {
       {/* ── Admin Actions (update status) ── */}
       <div style={{ padding: '0 16px', marginTop: 8 }}>
         <CaseActions caseId={caseData.case_id} currentStatus={caseData.status} />
+      </div>
+
+      <div style={{ padding: '0 16px', marginTop: 24 }}>
+        <AdminReplySection
+          caseId={caseData.case_id}
+          message={caseData.message}
+          initialAdminReply={caseData.admin_reply}
+        />
       </div>
 
       {/* ── Fixed CTA ── */} 

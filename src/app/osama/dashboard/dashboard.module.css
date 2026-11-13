@@ -832,3 +832,22 @@
     display: none;
   }
 }
+
+
+/* ONYneo panel shell */
+.shell{background:var(--paper);color:var(--ink)}
+.container{max-width:1120px}
+.topbar{background:white;border-bottom:3px solid var(--ink);backdrop-filter:none;-webkit-backdrop-filter:none}
+.topbarInner{height:66px}
+.brandMark{width:36px;height:36px;background:var(--lime);color:var(--ink);border:2px solid var(--ink);border-radius:0;box-shadow:3px 3px 0 var(--ink)}
+.brandSub{color:var(--ink);font:700 12px var(--font-mono)}
+.brandTag{color:#666;font:700 8px var(--font-mono);letter-spacing:.1em}
+.userAvatar{background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:0}
+.userEmail{color:#444;font-size:11px}
+.userRole{color:#777;font:700 8px var(--font-mono)}
+.subnav{padding:10px 0;border-bottom:2px solid var(--ink)}
+.subnavLink{height:36px;padding:0 13px;color:#555;border:2px solid transparent;border-radius:0;font:700 9px var(--font-mono);letter-spacing:.05em}
+.subnavLink:hover{color:var(--ink);background:var(--lime);border-color:var(--ink)}
+.subnavLink[data-active="true"]{color:var(--ink);background:var(--lime);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.main{gap:18px;padding-top:22px}
+@media(max-width:600px){.container{padding-inline:16px}.topbarInner{height:60px}.userEmail{max-width:120px}.userRole{display:none}}

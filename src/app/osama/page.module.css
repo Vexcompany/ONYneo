@@ -155,3 +155,18 @@
 .backLink:hover {
   color: var(--ink-hi);
 }
+
+
+.wrap{width:min(480px,calc(100% - 32px));min-height:100dvh;margin:0 auto;justify-content:center;padding:50px 0}
+.brandMark{width:48px;height:48px;background:var(--lime);border:3px solid var(--ink);border-radius:0;box-shadow:4px 4px 0 var(--ink);color:var(--ink)}
+.brandSub{color:var(--ink);font:700 17px var(--font-mono)}
+.brandByline{color:#666;font:700 9px var(--font-mono);letter-spacing:.12em}
+.card{padding:24px;background:white;border:3px solid var(--ink);border-radius:0;box-shadow:8px 8px 0 var(--ink)}
+.card::before{display:none}
+.cardIcon{background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:0;box-shadow:3px 3px 0 var(--ink)}
+.title{color:var(--ink);font-size:22px;letter-spacing:-.05em}
+.sub{color:#555;font-size:13px}
+.configError{background:#fff0f3;color:#a5133b;border:2px solid #c21c4b;border-radius:0}
+.notPublic{border-color:#ddd;color:#666}
+.backLink{color:var(--blue);font:700 10px var(--font-mono)}
+.backLink:hover{color:var(--ink)}

@@ -54,9 +54,12 @@ export function AdminReplySection({
   return (
     <div className={styles.replySection}>
       <div className={styles.replyBlock}>
-        <label className={styles.label} htmlFor="admin-reply-input">
-          Balasan Admin (Area Dekat Kura-kura)
-        </label>
+        <div className={styles.replyMeta}>
+          <label className={styles.label} htmlFor="admin-reply-input">
+            Balasan Resmi OSIS
+          </label>
+          <span className={styles.replyCount}>{reply.length}/450</span>
+        </div>
         <textarea
           id="admin-reply-input"
           value={reply}
@@ -66,7 +69,8 @@ export function AdminReplySection({
           }}
           placeholder="Tulis balasan resmi OSIS / PAGASKA di sini..."
           className={styles.replyTextarea}
-          rows={3}
+          rows={4}
+          maxLength={450}
         />
         <div className={styles.replyControls}>
           <button

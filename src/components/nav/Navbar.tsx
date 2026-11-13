@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "./Navbar.module.css";
 
 export function Navbar() {
   return (
@@ -12,7 +12,7 @@ export function Navbar() {
         <nav className={styles.links} aria-label="Navigasi utama">
           <a href="/#cara-kerja">Cara Kerja</a>
           <a href="/#aturan">Aturan</a>
-          <Link href="/aspirasi" className={styles.navCta}>Kirim Aspirasi →</Link>
+          <Link href="/#kirim-aspirasi" className={styles.navCta}>Kirim Aspirasi ↗</Link>
         </nav>
       </div>
     </header>
