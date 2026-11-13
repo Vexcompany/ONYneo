@@ -17,7 +17,7 @@ export const dynamic = "force-dynamic";
 export default async function OsamaVerifyPage({
   searchParams,
 }: {
-  searchParams: Promise<{ email?: string }>;
+  searchParams: { email?: string };
 }) {
   // If already signed in, jump straight to the dashboard.
   const user = await assertOsamaAccess();
