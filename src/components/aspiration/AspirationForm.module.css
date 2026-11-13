@@ -1,0 +1,22 @@
+.form { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.textarea { width: 100%; min-height: 310px; resize: vertical; padding: 20px; color: var(--white); background: #111; border: 3px solid var(--white); border-radius: 0; outline: none; font-family: var(--font-body); font-size: 18px; line-height: 1.55; -webkit-appearance: none; }
+.textarea::placeholder { color: #8d8d8d; }
+.textarea:focus { border-color: var(--lime); }
+.textarea:disabled { opacity: .65; cursor: not-allowed; }
+.inputError { border-color: var(--pink) !important; }
+.metaRow { display: flex; justify-content: space-between; align-items: center; min-height: 20px; padding: 0 2px; font-family: var(--font-mono); font-size: 10px; }
+.spacer { flex: 1; }
+.errorText { color: var(--pink); }
+.counter { color: #aaa; font-variant-numeric: tabular-nums; }
+.counterWarn { color: var(--orange); }
+.formError { display: flex; gap: 8px; padding: 10px; border: 2px solid var(--pink); color: var(--pink); font-size: 12px; }
+.submit { width: 100%; min-height: 56px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 3px solid var(--ink); border-radius: 0; background: var(--lime); color: var(--ink); box-shadow: 6px 6px 0 var(--white); cursor: pointer; font-family: var(--font-mono); font-size: 13px; font-weight: 700; transition: opacity 120ms ease, transform 120ms ease, box-shadow 120ms ease; }
+.submit:hover:not(:disabled) { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--white); }
+.submit:active:not(:disabled) { transform: translate(0, 0); box-shadow: 4px 4px 0 var(--white); }
+.submit:disabled { cursor: not-allowed; opacity: .4; }
+.sendIcon { flex-shrink: 0; }
+.spinner { width: 15px; height: 15px; border: 2px solid rgba(0,0,0,.25); border-top-color: var(--ink); border-radius: 50%; animation: spin 700ms linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 430px) { .textarea { min-height: 250px; padding: 16px; font-size: 16px; } .submit { min-height: 52px; } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }

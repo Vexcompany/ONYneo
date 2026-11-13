@@ -1,0 +1,71 @@
+.main { min-height: 100dvh; overflow-x: clip; background: var(--paper); }
+.hero { position: relative; min-height: 820px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr); align-items: center; gap: 40px; padding: 130px max(24px, 5vw) 90px; overflow: hidden; border-bottom: var(--border); }
+.heroContent { position: relative; z-index: 4; max-width: 690px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border: 2px solid var(--ink); background: var(--lime); font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .06em; box-shadow: 4px 4px 0 var(--ink); }
+.heroContent h1 { margin: 25px 0 18px; font-size: clamp(62px, 9vw, 126px); line-height: .83; letter-spacing: -.07em; font-weight: 700; }
+.heroContent h1 span { color: var(--blue); }
+.heroContent p { max-width: 560px; margin: 0; font-size: clamp(16px, 1.7vw, 20px); line-height: 1.55; }
+.heroActions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.primaryButton, .secondaryButton { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; padding: 0 20px; border: var(--border); text-decoration: none; font-family: var(--font-mono); font-size: 12px; font-weight: 700; transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease; }
+.primaryButton { background: var(--blue); color: var(--white); box-shadow: 7px 7px 0 var(--ink); }
+.secondaryButton { background: var(--white); box-shadow: 5px 5px 0 var(--ink); }
+.primaryButton:hover, .secondaryButton:hover { transform: translate(-2px, -2px); }
+.primaryButton:hover { background: var(--lime); color: var(--ink); }
+.secondaryButton:hover { background: var(--pink); }
+.heroArt { position: relative; min-height: 570px; border: var(--border); background: var(--orange); box-shadow: 12px 12px 0 var(--ink); overflow: hidden; transform: rotate(1deg); }
+.shape { position: absolute; display: block; border: var(--border); }
+.shapeOne { width: 190px; height: 190px; right: -45px; top: -55px; background: var(--pink); transform: rotate(24deg); }
+.shapeTwo { width: 120px; height: 120px; left: -38px; bottom: 45px; background: var(--violet); border-radius: 50%; }
+.shapeThree { width: 70px; height: 70px; right: 34px; bottom: 25px; background: var(--lime); transform: rotate(12deg); }
+.dots { position: absolute; inset: 35px auto auto 35px; width: 90px; height: 90px; background-image: radial-gradient(var(--ink) 2px, transparent 2px); background-size: 13px 13px; }
+.star { position: absolute; right: 36px; top: 55px; z-index: 3; font-size: 56px; line-height: 1; }
+.speech { position: absolute; left: 32px; top: 35%; z-index: 6; padding: 12px 15px; border: var(--border); background: var(--white); box-shadow: var(--shadow-sm); font-family: var(--font-mono); font-size: 10px; font-weight: 700; line-height: 1.2; transform: rotate(-5deg); }
+.logoCenter { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: min(260px, 62%); display: grid; grid-template-columns: 1fr 1fr; z-index: 5; }
+.logoCard { aspect-ratio: 1; display: grid; place-items: center; background: var(--white); border: var(--border); text-align: center; box-shadow: 6px 6px 0 var(--ink); }
+.logoSchool { transform: rotate(-6deg) translate(8px, 5px); }
+.logoOsis { background: var(--lime); transform: rotate(5deg) translate(-4px, -5px); }
+.logoInner { width: 70%; aspect-ratio: 1; display: grid; place-items: center; border: 2px solid var(--ink); overflow: hidden; }
+.logoInner img { width: 78%; height: 78%; object-fit: contain; }
+.sticker { position: absolute; right: 34px; bottom: 95px; z-index: 7; width: 90px; height: 90px; display: grid; place-items: center; text-align: center; background: var(--pink); border: var(--border); box-shadow: 6px 6px 0 var(--ink); font-family: var(--font-mono); font-size: 12px; font-weight: 700; transform: rotate(9deg); }
+.artLabel { position: absolute; left: 25px; bottom: 20px; z-index: 7; padding: 5px 8px; background: var(--ink); color: var(--white); font-family: var(--font-mono); font-size: 10px; }
+.ticker { min-height: 58px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 18px; padding: 12px 20px; border-bottom: var(--border); background: var(--ink); color: var(--white); font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-align: center; }
+.ticker b { color: var(--lime); }
+.section { padding: 110px 24px; border-bottom: var(--border); }
+.sectionInner { width: min(1120px, 100%); margin: 0 auto; }
+.section h2, .finalSection h2 { max-width: 900px; margin: 22px 0 15px; font-size: clamp(48px, 8vw, 92px); line-height: .88; letter-spacing: -.06em; }
+.intro { max-width: 680px; margin: 0; font-size: 17px; line-height: 1.65; }
+.stepsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 52px; }
+.stepCard { min-height: 280px; padding: 20px; border: var(--border); background: var(--white); box-shadow: var(--shadow); }
+.stepCard:nth-child(2) { background: var(--lime); transform: translateY(16px); }
+.stepCard:nth-child(3) { background: var(--pink); }
+.stepCard:nth-child(4) { background: var(--blue); color: var(--white); transform: translateY(16px); }
+.stepNum { font-family: var(--font-mono); font-size: 11px; font-weight: 700; }
+.stepCard h3 { margin: 70px 0 10px; font-size: 22px; line-height: 1; letter-spacing: -.03em; }
+.stepCard p { margin: 0; font-size: 13px; line-height: 1.55; }
+.privacySection { padding: 105px 24px; background: var(--blue); color: var(--white); border-bottom: var(--border); }
+.privacyGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 48px; }
+.privacyCard { min-height: 180px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; border: var(--border); background: var(--white); color: var(--ink); box-shadow: 7px 7px 0 var(--ink); }
+.privacyCard:nth-child(2) { background: var(--lime); transform: translateY(12px); }
+.privacyCard:nth-child(3) { background: var(--orange); }
+.privacyCard:nth-child(4) { background: var(--pink); transform: translateY(12px); }
+.privacyCard span, .ruleCard span { font-family: var(--font-mono); font-size: 11px; font-weight: 700; }
+.privacyCard strong { max-width: 14ch; font-size: 17px; line-height: 1.05; }
+.rulesGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 48px; }
+.ruleCard { min-height: 120px; padding: 18px 20px; display: flex; align-items: center; gap: 18px; border: var(--border); background: var(--white); box-shadow: var(--shadow-sm); }
+.ruleCard:nth-child(2) { background: var(--pink); }
+.ruleCard:nth-child(3) { background: var(--lime); }
+.ruleCard:nth-child(4) { background: var(--orange); }
+.ruleCard strong { font-size: 22px; line-height: 1; }
+.finalSection { position: relative; padding: 130px 24px 150px; text-align: center; overflow: hidden; background: var(--paper-deep); border-bottom: var(--border); }
+.finalSection .eyebrow { background: var(--pink); }
+.finalSection h2 { max-width: 850px; margin-inline: auto; }
+.finalSection p { margin: 0 auto; max-width: 520px; font-size: 18px; line-height: 1.55; }
+.finalSection .primaryButton { margin-top: 70px; }
+.finalSticker { position: absolute; top: 50px; right: 9%; font-size: 80px; transform: rotate(12deg); }
+.footer { min-height: 110px; padding: 30px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--ink); color: var(--white); font-family: var(--font-mono); }
+.footer strong { font-size: 15px; }
+.footer span { font-size: 10px; opacity: .7; text-align: right; }
+@media (max-width: 1000px) { .hero { grid-template-columns: 1fr; padding-top: 120px; } .heroContent { max-width: 800px; } .heroArt { width: min(650px, 100%); min-height: 500px; margin: 0 auto; } .stepsGrid, .privacyGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .hero { min-height: auto; padding: 105px 20px 70px; gap: 42px; } .heroContent h1 { font-size: clamp(58px, 17vw, 88px); } .heroArt { min-height: 430px; } .section, .privacySection { padding: 80px 20px; } .section h2, .finalSection h2 { font-size: clamp(48px, 13vw, 70px); } .stepsGrid, .privacyGrid, .rulesGrid { grid-template-columns: 1fr; } .stepCard:nth-child(2), .stepCard:nth-child(4), .privacyCard:nth-child(2), .privacyCard:nth-child(4) { transform: none; } .footer { flex-direction: column; align-items: flex-start; } .footer span { text-align: left; } .finalSection { padding: 90px 20px 120px; } .finalSection .primaryButton { width: 100%; margin-top: 60px; } }
+@media (max-width: 430px) { .hero { padding-inline: 16px; } .heroArt { min-height: 350px; box-shadow: 8px 8px 0 var(--ink); } .logoCenter { width: min(220px, 70%); } .speech { left: 15px; top: 25%; font-size: 8px; } .sticker { right: 15px; bottom: 55px; width: 72px; height: 72px; font-size: 10px; } .shapeOne { width: 130px; height: 130px; } .star { font-size: 42px; right: 20px; top: 32px; } .ticker { gap: 10px; font-size: 9px; } .section, .privacySection { padding-inline: 16px; } .stepCard { min-height: 220px; } .stepCard h3 { margin-top: 48px; } .ruleCard strong { font-size: 18px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
