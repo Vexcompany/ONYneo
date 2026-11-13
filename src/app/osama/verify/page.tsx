@@ -23,8 +23,7 @@ export default async function OsamaVerifyPage({
   const user = await assertOsamaAccess();
   if (user) redirect("/osama/dashboard");
 
-  const params = await searchParams;
-  const email = (params.email ?? "").trim();
+  const email = (searchParams.email ?? "").trim();
   if (!email) {
     redirect("/osama");
   }
