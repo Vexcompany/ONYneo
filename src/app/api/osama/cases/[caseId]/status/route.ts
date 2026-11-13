@@ -45,7 +45,7 @@ function jsonError(
 
 export async function POST(
   req: NextRequest,
-  ctx: { params: Promise<{ caseId: string }> },
+  ctx: { params: { caseId: string } },
 ): Promise<NextResponse<ErrorBody | SuccessBody>> {
   // 1. Auth: must be a signed-in user on the allowlist.
   const user = await assertOsamaAccess();
@@ -54,7 +54,7 @@ export async function POST(
   }
 
   // 2. Validate the caseId from the route param.
-  const { caseId } = await ctx.params;
+  const { caseId } = ctx.params;
   if (!caseId || caseId.length > 100 || !/^OSM-[A-Z0-9]{4,12}-[A-Z0-9]{4,12}$/.test(caseId)) {
     return jsonError(400, {
       ok: false,
